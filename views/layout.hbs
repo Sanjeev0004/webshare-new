@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/theme/monokai.min.css">
+       <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+  	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/">WebShare</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      	{{#if user}}
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role = "button" aria-haspopup="true" aria-expanded="false">
+                {{user.name}}<span class="caret">
+              </span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+            </li>
+      	{{else}}
+      	   <li><a href="/login">Login</a></li>
+      	   <li><a href="/register">Register</a></li>
+      	{{/if}}
+      </ul>
+    </div>
+  </div>
+ </nav>
+    {{{body}}}
+
+
+  </body>
+
+</html>
