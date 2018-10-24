@@ -57,7 +57,7 @@
     <script src="/plugins/ot/ot.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     
-<script src="https://rocky-depths-74216.herokuapp.com/peer/peer.js"></script>
+<script src="https://enigmatic-castle-31862.herokuapp.com/peer/peer.js"></script>
 
 
   <script>
@@ -115,9 +115,9 @@
         // Compatibility shim
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
     // PeerJS object
-     var peer = new Peer(username + romId, {
-       host : 'rocky-depths-74216.herokuapp.com'
-       path: '/peerjs',
+     var peer = new Peer(username + roomId, {
+       host : 'enigmatic-castle-31862.herokuapp.com/peer',
+       path: '/peer.js',
        port: 433,
        secure: true,
        key : 'WebShare',
