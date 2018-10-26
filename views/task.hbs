@@ -106,7 +106,7 @@
          socket.emit('chatMessage', {message: userMessage, username: username});
          $('#userMessage').val("");
      };
-
+ 
     socket.on('chatMessage', function(data) {
         $('#chatbox-listMessages').append(userMessage(data.username, data.message));
     });
@@ -116,9 +116,9 @@
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
     // PeerJS object
      var peer = new Peer(username + roomId, {
-       host : 'enigmatic-castle-31862.herokuapp.com/peer',
-       path: '/peer.js',
-       port: 433,
+       host : 'enigmatic-castle-31862.herokuapp.com',
+       path: '/peerjs',
+       port: 443,
        secure: true,
        key : 'WebShare',
        debug: true
